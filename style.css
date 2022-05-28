@@ -1,18 +1,41 @@
-#mainContainer {
+body {
     display: flex;
     flex-direction: column;
-    outline: 1px solid rebeccapurple;
     align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+#btnStart {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+}
+
+#mainContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: center;
+    max-width: 800px;
+    max-height: 800px;
+    flex: 0 1 auto;
+}
+
+.mainContainer {
+    outline: 2px solid rebeccapurple;
 }
 
 .row {
     display: flex;
-    height: 3em;
+    justify-content: stretch;
+    height: 50px;
 }
 
-#columnid {
-    width: 3em;
+.column {
+    width: 50px;
     transition-duration: 1s;
+    flex-grow: auto;
 }
 
 .hover {

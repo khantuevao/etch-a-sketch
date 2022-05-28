@@ -11,7 +11,6 @@ const createColumn = function() {
     column.setAttribute('id', 'columnid')
     column.classList.add('column');         
     row.appendChild(column);
-    return
 }
 
 function createGrid() {
@@ -21,6 +20,8 @@ function createGrid() {
             createColumn();
         }
     }
+
+    mainContainer.classList.add('mainContainer');
 
     let columns = document.querySelectorAll('.column');
     columns.forEach(column => column.addEventListener('mouseover', function(event) {
