@@ -13,16 +13,17 @@ const createColumn = function() {
     row.appendChild(column);
 }
 
-function createGrid() {
-    for (i = 0; i < 16; i++) {
-        createRow();
-        for (j = 0; j < 16; j++) {
-            createColumn();
-        }
-    }
+function createButton() {
+    let btnAsk = document.createElement('button');
+    btnAsk.setAttribute('id', 'btnAsk');
+    btnAsk.textContent = 'Change grid';
+    let body = document.querySelector('body');
+    body.prepend(btnAsk);
+    const btnAskCh = document.querySelector('#btnAsk');
+    btnAskCh.addEventListener('click', changeGrid);
+}
 
-    mainContainer.classList.add('mainContainer');
-
+function hover() {
     let columns = document.querySelectorAll('.column');
     columns.forEach(column => column.addEventListener('mouseover', function(event) {
         event.target.classList.add('hover');
@@ -32,10 +33,42 @@ function createGrid() {
     }, false));
 }
 
+function createGrid() {
+    mainContainer.classList.add('mainContainer');
+    createButton();
+    for (i = 0; i < 16; i++) {
+        createRow();
+        for (j = 0; j < 16; j++) {
+            createColumn();
+        }
+    }
+    hover();
+}
+
+function changeGrid() {
+    
+    let result = prompt('Enter number of squares per side', '');
+    if (isNaN(result) || result < 0) {
+        alert('Error, please enter a valid number');
+    } else if (result > 100) {
+        alert('Please enter a number less than 100');
+    } else {
+        const remove = document.querySelectorAll('.row');
+        remove.forEach(row => {
+            row.remove();
+        });
+        for (i = 0; i < result; i++) {
+            createRow();
+            for (j = 0; j < result; j++) {
+                createColumn();
+            }
+        }
+    }
+    hover();
+}
+
 const btnStart = document.querySelector('#btnStart');
 btnStart.addEventListener('click', () => {
     createGrid();
     btnStart.style.display = 'none';
 });
-
-

@@ -6,10 +6,11 @@ body {
     height: auto;
 }
 
-#btnStart {
+button {
     width: 150px;
     height: 50px;
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 #mainContainer {
@@ -28,18 +29,18 @@ body {
 .row {
     display: flex;
     justify-content: stretch;
-    height: 100px;
+    height: 800px;
     flex-wrap: nowrap;
     max-width: 800px;
 }
 
 .column {
-    width: 100px;
+    width: 800px;
     transition-duration: 1s;
     flex-grow: auto;
 }
 
 .hover {
-    background-color: rgb(153, 195, 202);
+    background-color: rgb(88, 169, 184);
 }
 
