@@ -1,8 +1,13 @@
-const mainContainer = document.querySelector('#mainContainer');
+const btnStart = document.querySelector('#btnStart');
+btnStart.addEventListener('click', () => {
+    createGrid();
+    btnStart.style.display = 'none';
+});
 
 const createRow = function() {
     row = document.createElement('div');
     row.classList.add('row');
+    const mainContainer = document.querySelector('#mainContainer');
     mainContainer.appendChild(row);
 }
 
@@ -66,9 +71,3 @@ function changeGrid() {
     }
     hover();
 }
-
-const btnStart = document.querySelector('#btnStart');
-btnStart.addEventListener('click', () => {
-    createGrid();
-    btnStart.style.display = 'none';
-});
