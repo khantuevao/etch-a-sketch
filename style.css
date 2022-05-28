@@ -1,0 +1,18 @@
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid rebeccapurple;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    height: 3em;
+    outline: 1px solid red;
+}
+
+.column {
+    width: 3em;
+    outline: 1px solid black;
+}
+
