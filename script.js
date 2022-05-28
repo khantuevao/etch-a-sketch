@@ -32,9 +32,6 @@ function hover() {
     let columns = document.querySelectorAll('.column');
     columns.forEach(column => column.addEventListener('mouseover', function(event) {
         event.target.classList.add('hover');
-        setTimeout(function() {
-            event.target.classList.remove('hover');
-        }, 500);
     }, false));
 }
 
@@ -51,7 +48,6 @@ function createGrid() {
 }
 
 function changeGrid() {
-    
     let result = prompt('Enter number of squares per side', '');
     if (isNaN(result) || result < 0) {
         alert('Error, please enter a valid number');

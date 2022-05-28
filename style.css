@@ -36,11 +36,10 @@ button {
 
 .column {
     width: 800px;
-    transition-duration: 1s;
     flex-grow: auto;
 }
 
 .hover {
-    background-color: rgb(88, 169, 184);
+    background-color: rgb(0, 0, 0);
 }
 
