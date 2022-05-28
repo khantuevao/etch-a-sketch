@@ -8,11 +8,14 @@
 .row {
     display: flex;
     height: 3em;
-    outline: 1px solid red;
 }
 
-.column {
+#columnid {
     width: 3em;
-    outline: 1px solid black;
+    transition-duration: 1s;
+}
+
+.hover {
+    background-color: rgb(204, 226, 230);
 }
 
