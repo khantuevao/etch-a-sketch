@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#main-container {
+    width: 40rem;
+    height: 40rem;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 10rem;
+    height: 10rem;
+    background-color: honeydew;
+}
+
