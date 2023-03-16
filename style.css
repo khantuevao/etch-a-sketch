@@ -1,19 +1,37 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #main-container {
-    width: 40rem;
-    height: 40rem;
+    width: 500px;
+    height: 500px;
     border: 1px solid black;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
 }
 
 .square {
-    width: 10rem;
-    height: 10rem;
     background-color: honeydew;
+    height: 100%;
+    flex: 1;
+
+}
+
+.selected {
+    background-color: lightpink;
+}
+
+button {
+    width: 8rem;
 }
 
